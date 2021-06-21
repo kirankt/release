@@ -1,0 +1,10 @@
+ref:
+  as: baremetalds-e2e-conf-router
+  from: baremetal-installer
+  commands: baremetalds-e2e-conf-router-commands.sh
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 500Mi
+  documentation: |-
+    Injects test list into e2e-metal-conf-router.

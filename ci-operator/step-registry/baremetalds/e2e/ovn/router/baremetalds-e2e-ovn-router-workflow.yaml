@@ -1,0 +1,20 @@
+workflow:
+  as: baremetalds-e2e-ovn-router
+  steps:
+    env:
+      DEVSCRIPTS_CONFIG: |
+        IP_STACK=v4v6
+        NETWORK_TYPE=OVNKubernetes
+    pre:
+      - ref: baremetalds-packet-setup
+      - ref: ipi-install-rbac
+      - ref: ovn-conf
+      - ref: baremetalds-devscripts-proxy
+      - ref: baremetalds-devscripts-setup
+    test:
+      - ref: baremetalds-e2e-conf-router
+      - ref: baremetalds-e2e-test
+    post:
+      - chain: baremetalds-ipi-post
+  documentation: |-
+    This workflow executes the common end-to-end test suite on a cluster provisioned by running dev-scripts on a packet server with dualstack enabled.

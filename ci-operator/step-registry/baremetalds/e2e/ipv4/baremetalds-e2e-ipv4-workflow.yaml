@@ -1,0 +1,16 @@
+workflow:
+  as: baremetalds-e2e-ipv4
+  steps:
+    env:
+      DEVSCRIPTS_CONFIG: |
+        IP_STACK=v4
+        NETWORK_TYPE=OpenShiftSDN
+    pre:
+      - chain: baremetalds-ipi-pre
+    test:
+      - ref: baremetalds-e2e-conf
+      - ref: baremetalds-e2e-test
+    post:
+      - chain: baremetalds-ipi-post
+  documentation: |-
+    This workflow executes the common end-to-end test suite on a IPv4 cluster provisioned by running dev-scripts on a packet server.

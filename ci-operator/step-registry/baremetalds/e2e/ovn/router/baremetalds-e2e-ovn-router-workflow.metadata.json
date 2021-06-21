@@ -1,0 +1,20 @@
+{
+	"path": "baremetalds/e2e/ovn/router/baremetalds-e2e-ovn-router-workflow.yaml",
+	"owners": {
+		"approvers": [
+			"danwinship",
+			"dcbw",
+			"knobunc",
+			"squeed"
+		],
+		"reviewers": [
+			"alexanderconstantinescu",
+			"danwinship",
+			"dcbw",
+			"jacobtanenbaum",
+			"rcarrillocruz",
+			"squeed",
+			"markdgray"
+		]
+	}
+}

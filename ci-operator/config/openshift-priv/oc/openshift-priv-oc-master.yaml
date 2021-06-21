@@ -148,11 +148,7 @@ tests:
 - as: e2e-metal-ipi-ovn-ipv6
   steps:
     cluster_profile: packet
-    env:
-      DEVSCRIPTS_CONFIG: |
-        IP_STACK=v6
-        NETWORK_TYPE=OVNKubernetes
-    workflow: baremetalds-e2e
+    workflow: baremetalds-e2e-ovn-ipv6
 zz_generated_metadata:
   branch: master
   org: openshift-priv
